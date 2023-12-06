@@ -1,9 +1,13 @@
-#include <iostream>
+#include <iostream> 
+
+using namespace std;
 
 int main()
 {
-    std::cout << "hey uday." << std::endl;
-        std::cout << "hey uday." << std::endl;
+    int i;
+    cin >> i;
+    cout << i << endl;  
+    cout << "hey uday." << endl;
 
     return 0;
 }
