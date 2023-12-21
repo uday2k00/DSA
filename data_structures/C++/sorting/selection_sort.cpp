@@ -2,6 +2,9 @@
 #include <algorithm>
 using namespace std;
 
+// Select the least element of the array and swap it.
+// Time complexity: O(N^2)
+
 void selection_sort(int arr[], int n)
 {
     for (int i = 0; i <= n - 2; i++)
