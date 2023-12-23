@@ -4,6 +4,8 @@ using namespace std;
 //Two pointer Approach
 // Time Complexity: Brute Force ---> Nlog(N)+ Log(N); Best ---> N
 
+//Brute force approach: Use set and insert elements in it.
+
 int removeDublicates( int arr[], int n){
     int i =0;
     for (int j =1; j<n; j++){
