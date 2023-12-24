@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//Time Complexity: Brute Force ---> O(N), Best---> O(d) + O(N-d) + O(N) = O(2N)
+//Space --> Brute Force --->O(d), Best --->O(1)
 
 vector<int> rotate_array_by_d(vector<int>&arr, int n, int k){
     int d = k%n;
@@ -12,7 +14,6 @@ vector<int> rotate_array_by_d(vector<int>&arr, int n, int k){
     reverse(arr.begin(), arr.end());
     
     return arr;
-
 
 }
 
@@ -24,7 +25,7 @@ int main(){
     for(int i = 0; i<n; i++){
         cin>>arr[i];
     }
-    vector<int> rotated_arr =rotate_array_by_d(arr, n, k);
+    rotate_array_by_d(arr, n, k);
 
     for(int i =0; i<n; i++){
         cout<<arr[i]<<" ";
