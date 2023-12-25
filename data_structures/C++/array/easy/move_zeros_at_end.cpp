@@ -16,7 +16,7 @@ vector<int> move_zeros(vector<int>&arr, int n){
 
     for (int i = j+1; i<n; i++){
         if(arr[i] !=0){
-            swap(arr[i], arr[j]);
+            swap(arr[i], arr[j+1]);
             j++;
         }
     }
