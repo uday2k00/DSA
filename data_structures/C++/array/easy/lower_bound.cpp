@@ -4,24 +4,22 @@ using namespace std;
 
 
 
-int lowerBound(vector<int> arr, int n, int x) {
-    int low = 0, high = n - 1;
+int lower_bound(vector<int>&arr, int n, int t){
+    int low = 0;
+    int high = n-1;
     int ans = n;
-
-    while (low <= high) {
-        int mid = (low + high) / 2;
-        // maybe an answer
-        if (arr[mid] >= x) {
+    while(low<=high){
+        int mid = (low+high)/2;
+        if(arr[mid]>=t) {
+            high = mid-1;
             ans = mid;
-            //look for smaller index on the left
-            high = mid - 1;
         }
-        else {
-            low = mid + 1; // look on the right
-        }
+        else low = mid +1;
     }
     return ans;
+
 }
+
 
 int main(){
     int n,t;
@@ -31,7 +29,7 @@ int main(){
     for(int i = 0; i<n; i++){
         cin>>arr[i];
     }
-    int lb = lowerBound(arr, n, t);
+    int lb = lower_bound(arr, n, t);
     cout<<lb;
 
     return 0;
