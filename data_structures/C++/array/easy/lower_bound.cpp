@@ -2,7 +2,9 @@
 #include<vector>
 using namespace std;
 
-
+// Time Complexity = log(n)
+// for upper bound remove = sign in loop
+// Insert Element in an Sorted array
 
 int lower_bound(vector<int>&arr, int n, int t){
     int low = 0;
@@ -34,5 +36,7 @@ int main(){
 
     return 0;
 }
+
+
 
 
